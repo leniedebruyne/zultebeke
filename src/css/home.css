@@ -3,35 +3,40 @@
    ============================================================================ */
 
 .introduction {
+    min-height: 66.666vh;
     width: 100%;
     background-color: var(--color-bg);
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: 64px;
+
+    display: flex;
+    align-items: center;
 }
 
 .introduction__container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
 }
 
 .introduction__heading {
-    margin-bottom: var(--spacing-lg);
+    font-family: "Libre Baskerville", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
 }
 
 .introduction__text {
+    font-family: "Poppins", sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    max-width: 800px;
     color: var(--color-text);
-}
-
-@media (max-width: 768px) {
-    .introduction {
-        padding: var(--spacing-xl) var(--spacing-md);
-    }
-
-    .introduction__heading {
-        margin-bottom: var(--spacing-md);
-    }
+    margin: 0;
 }
 
 /* ============================================================================
@@ -40,17 +45,28 @@
 
 .artists {
     width: 100%;
+    min-height: calc(100vh - 75px);
     background-color: var(--color-section-bg);
     padding: var(--spacing-2xl) var(--spacing-lg);
+    display: flex;
+    align-items: flex-start;
 }
 
 .artists__container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 660px;
     gap: var(--spacing-2xl);
-    align-items: center;
+    height: 100%;
+
+
+}
+
+.artists__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .artists__heading {
@@ -63,47 +79,37 @@
     color: var(--color-text);
 }
 
+/* --- Gallery layout --- */
+
 .artists__gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* twee kleine foto's bovenaan */
+    grid-template-rows: auto 1fr;
+    /* grote foto onderaan */
     gap: var(--spacing-md);
+    height: 100%;
 }
 
 .artists__gallery-item {
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
     object-fit: cover;
     border-radius: 4px;
 }
 
+/* Grote foto onderaan, over beide kolommen */
 .artists__gallery-item--large {
-    grid-column: 1 / -1;
-    aspect-ratio: 2 / 1;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
 }
 
-@media (max-width: 768px) {
-    .artists {
-        padding: var(--spacing-xl) var(--spacing-md);
-    }
-
-    .artists__container {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-
-    .artists__gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .artists__gallery-item--large {
-        aspect-ratio: 1;
-    }
-}
 
 /* ============================================================================
    GALLERY SECTION
    ============================================================================ */
 
+/* SECTION WRAPPER */
 .gallery {
     width: 100%;
     background-color: var(--color-bg);
@@ -115,55 +121,66 @@
     margin: 0 auto;
 }
 
+.gallery__heading,
+.gallery__subtitle {
+    width: 1037px;
+    margin: 0 auto;
+    text-align: left;
+}
+
 .gallery__heading {
-    text-align: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 20px;
 }
 
 .gallery__subtitle {
-    text-align: center;
-    font-size: 16px;
-    color: var(--color-text);
     margin-bottom: var(--spacing-2xl);
 }
 
+/* --- DIT IS DE ENIGE GRID --- */
 .gallery__grid {
+    width: 1037px;
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 253px 507px 253px;
     gap: var(--spacing-md);
 }
 
-.gallery__item {
-    aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 4px;
-}
-
-.gallery__item-image {
+/* --- ITEMS --- */
+.gallery__item img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    height: auto;
 }
 
-.gallery__item:hover .gallery__item-image {
-    transform: scale(1.05);
+/* POSITIES */
+.gallery__item--birds {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-@media (max-width: 768px) {
-    .gallery {
-        padding: var(--spacing-xl) var(--spacing-md);
-    }
-
-    .gallery__grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: var(--spacing-sm);
-    }
-
-    .gallery__subtitle {
-        margin-bottom: var(--spacing-lg);
-    }
+.gallery__item--nature {
+    grid-column: 2;
+    grid-row: 1;
 }
+
+.gallery__item--yellow {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.gallery__item--leave {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -303px;
+}
+
+.gallery__item--flower {
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: -303px;
+}
+
 
 /* ============================================================================
    MEET ARTISTS SECTION
@@ -180,15 +197,20 @@
     margin: 0 auto;
 }
 
+/* Heading links uitlijnen zoals gallery */
 .meet-artists__heading {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
+    width: 1037px;
+    margin: 0 auto 20px auto;
+    /* 20px gap zoals gallery */
+    text-align: left;
 }
 
+/* GRID */
 .meet-artists__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-2xl);
+    position: relative;
 }
 
 /* ============================================================================
@@ -203,16 +225,22 @@
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    padding-top: 45px;
 }
 
-.artist-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+/* Rechter card 100px lager */
+.artist-card:nth-child(2) {
+    margin-top: 100px;
 }
 
+/* IMAGE LIMITS */
 .artist-card__image {
     width: 100%;
-    aspect-ratio: 1;
+    max-width: 484px;
+    max-height: 648px;
     object-fit: cover;
+    margin: 0 auto;
+    /* zodat de foto gecentreerd blijft binnen de card */
 }
 
 .artist-card__content {
@@ -245,23 +273,4 @@
 
 .artist-card__link:hover {
     border-bottom-color: var(--color-accent);
-}
-
-@media (max-width: 768px) {
-    .meet-artists {
-        padding: var(--spacing-xl) var(--spacing-md);
-    }
-
-    .meet-artists__heading {
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .meet-artists__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-
-    .artist-card__content {
-        padding: var(--spacing-md);
-    }
 }
