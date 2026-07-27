@@ -1,0 +1,229 @@
+/* ============================================================================
+   ABOUT SECTION (Detail Page)
+   ============================================================================ */
+
+.about {
+    width: 100%;
+    min-height: 60vh;
+    background-color: var(--color-bg);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+
+    display: flex;
+    align-items: center;
+}
+
+.about__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.about__container--reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.about__container--reverse .about__image {
+    order: -1;
+}
+
+.about__heading {
+    margin-bottom: var(--spacing-lg);
+}
+
+.about__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.about__image {
+    width: 100%;
+}
+
+.about__image-img {
+    max-width: 428px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+
+/* ============================================================================
+   INSPIRATION SECTION (Detail Page)
+   ============================================================================ */
+
+.inspiration {
+    width: 100%;
+    background-color: var(--color-bosmos);
+    color: #fff;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.inspiration__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+/* --- Gallery layout zoals artists gallery --- */
+.inspiration__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* twee kleine foto's bovenaan */
+    grid-template-rows: auto 1fr;
+    /* grote foto onderaan */
+    gap: var(--spacing-md);
+}
+
+.inspiration__gallery-item {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.inspiration__gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.inspiration__gallery-item:hover .inspiration__gallery-img {
+    transform: scale(1.05);
+}
+
+/* Grote foto onderaan */
+.inspiration__gallery-item--large {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    height: 400px;
+}
+
+.inspiration__heading {
+    margin-bottom: var(--spacing-lg);
+    color: #fff;
+}
+
+.inspiration__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* ============================================================================
+   STORY SECTION (Detail Page)
+   ============================================================================ */
+
+.story {
+    width: 100%;
+    background-color: var(--color-bg);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.story__heading {
+    margin-bottom: var(--spacing-lg);
+}
+
+.story__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.story__image {
+    max-width: 428px;
+}
+
+.story__image-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+
+/* ============================================================================
+   GALLERY SECTION (Detail Page)
+   ============================================================================ */
+
+.gallery-section {
+    background-color: var(--color-honingklei);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.gallery-section__heading {
+    padding-bottom: 2rem;
+}
+
+.gallery-section__container {
+    max-width: 1038px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gallery-section__grid {
+    display: grid;
+    grid-template-columns: 338px 338px 338px;
+    grid-template-rows: 380px 300px;
+    gap: var(--spacing-md);
+    max-width: 1038px;
+    margin: 0 auto;
+}
+
+/* 1 — plate (links boven, breed) */
+.gallery-section__item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    width: 697px;
+    height: 380px;
+}
+
+/* 2 — horn (links onder) */
+.gallery-section__item:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 338px;
+    height: 300px;
+}
+
+/* 3 — doll (rechts onder links) */
+.gallery-section__item:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 338px;
+    height: 300px;
+}
+
+/* 4 — cowhorn (grote verticale rechts) */
+.gallery-section__item:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    width: 338px;
+    height: 705px;
+}
+
+.gallery-section__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
