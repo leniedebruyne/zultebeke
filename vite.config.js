@@ -1,8 +1,15 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/zultebeke/',
+    base: '',
     build: {
-        outDir: 'docs',
-    },
+        outDir: 'dist',
+        rollupOptions: {
+            input: {
+                main: 'index.html',
+                lieven: 'lieven.html',
+                nathalie: 'nathalie.html'
+            }
+        }
+    }
 })
