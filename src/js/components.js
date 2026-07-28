@@ -6,7 +6,7 @@
 async function loadComponents() {
     try {
         // Load and insert header
-        const headerResponse = await fetch('/zultebeke/src/components/nav.html');
+        const headerResponse = await fetch('src/components/nav.html');
         const headerHTML = await headerResponse.text();
         const headerPlaceholder = document.getElementById('header-placeholder');
         if (headerPlaceholder) {
@@ -14,7 +14,7 @@ async function loadComponents() {
         }
 
         // Load and insert footer
-        const footerResponse = await fetch('/zultebeke/src/components/footer.html');
+        const footerResponse = await fetch('src/components/footer.html');
         const footerHTML = await footerResponse.text();
         const footerPlaceholder = document.getElementById('footer-placeholder');
         if (footerPlaceholder) {
