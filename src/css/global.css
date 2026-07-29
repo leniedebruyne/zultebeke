@@ -246,8 +246,8 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 .hero {
     position: relative;
     width: 100%;
-    padding-top: 75px;
-    height: calc(100vh - 75px);
+    padding-top: 65px;
+    height: calc(100vh - 65px);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -313,62 +313,74 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     width: 100%;
     background-color: var(--color-espressohout);
     color: #fff;
-    padding: var(--spacing-2xl) var(--spacing-lg);
-    margin-top: auto;
+    padding: 60px 40px;
 }
 
+/* GRID: 2 kolommen + 1 rij onderaan */
 .footer__container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-xl);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
 }
 
-.footer__content {
+/* Beide kolommen */
+.footer__col {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 14px;
 }
 
-.footer__heading {
-    font-size: 24px;
+/* Contact titel */
+.footer__title {
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-}
-
-.footer__subheading {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-}
-
-.footer__text {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.footer__list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-.footer__link {
     color: #fff;
+}
+
+/* Email */
+.footer__email {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer__email:hover {
+    opacity: 0.8;
+}
+
+/* Social icons */
+.footer__socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer__icon img {
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.2s ease;
+}
+
+.footer__icon:hover img {
+    opacity: 0.7;
+}
+
+/* Handle onder icons */
+.footer__handle {
     font-size: 16px;
-    transition: color 0.2s ease;
+    opacity: 0.9;
+    margin-top: 8px;
 }
 
-.footer__link:hover {
-    color: var(--color-accent);
-}
-
-.footer__copyright {
+/* Zultebeke onderaan */
+.footer__brand {
     grid-column: 1 / -1;
-    text-align: center;
-    font-size: 14px;
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    font-size: 120px;
+    font-weight: 600;
+    margin-top: 20px;
+    letter-spacing: 8px;
+    color: #fff;
 }
