@@ -402,15 +402,40 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     margin-top: 8px;
 }
 
+.footer__brand-row {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 /* Zultebeke onderaan */
 .footer__brand {
-    grid-column: 1 / -1;
     text-align: left;
     font-size: 120px;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 0;
     letter-spacing: 8px;
     color: #fff;
+}
+
+.footer__credit-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__credit-link:hover {
+    opacity: 0.8;
+}
+
+.footer__credit-logo {
+    width: 132px;
+    height: auto;
+    filter: brightness(0) invert(1);
 }
 
 /* ============================================================================
@@ -521,10 +546,19 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
         gap: 28px;
     }
 
+    .footer__brand-row {
+        margin-top: 0;
+        gap: 14px;
+        align-items: center;
+    }
+
     .footer__brand {
         font-size: 27px;
         letter-spacing: 2px;
-        margin-top: 0;
+    }
+
+    .footer__credit-logo {
+        width: 92px;
     }
 }
 
@@ -564,6 +598,10 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
         font-size: clamp(72px, 11vw, 96px);
         letter-spacing: 4px;
     }
+
+    .footer__credit-logo {
+        width: 112px;
+    }
 }
 
 /* Larger than desktop */
@@ -595,5 +633,9 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 
     .footer__brand {
         font-size: clamp(120px, 9vw, 180px);
+    }
+
+    .footer__credit-logo {
+        width: 152px;
     }
 }
