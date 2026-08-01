@@ -222,16 +222,13 @@ ul {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    gap: 4px;
     padding: 0;
 }
 
-.header__menu-toggle span {
+.header__menu-icon {
     display: block;
-    width: 18px;
-    height: 2px;
-    background-color: var(--color-espressohout);
-    transition: background-color 0.2s ease;
+    width: 22px;
+    height: 22px;
 }
 
 .header__nav-link {
@@ -478,8 +475,12 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 
     .hero {
         padding-top: 0;
-        min-height: calc(100vh - 130px);
-        height: auto;
+        min-height: 85svh;
+        height: 85svh;
+    }
+
+    .hero__image {
+        object-position: center 28%;
     }
 
     .hero__content {
@@ -499,7 +500,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 
     .hero__subtitle {
         font-size: 17px;
-        max-width: 36ch;
+        max-width: 34ch;
     }
 
     .footer {
