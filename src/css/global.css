@@ -512,7 +512,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     }
 
     .footer__brand {
-        font-size: clamp(44px, 20vw, 72px);
+        font-size: 27px;
         letter-spacing: 2px;
         margin-top: 0;
     }
