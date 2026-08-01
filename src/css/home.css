@@ -274,3 +274,200 @@
 .artist-card__link:hover {
     border-bottom-color: var(--color-accent);
 }
+
+/* ============================================================================
+   RESPONSIVE LAYOUT
+   ============================================================================ */
+
+/* Phone */
+@media (max-width: 767px) {
+    .introduction {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .introduction__container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .introduction__heading {
+        font-size: 32px;
+    }
+
+    .artists {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .artists__container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .artists__gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .artists__gallery-item--large {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .gallery {
+        padding: 40px 20px;
+    }
+
+    .gallery__heading,
+    .gallery__subtitle,
+    .gallery__grid {
+        width: 100%;
+    }
+
+    .gallery__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gallery__item--birds,
+    .gallery__item--nature,
+    .gallery__item--yellow,
+    .gallery__item--leave,
+    .gallery__item--flower {
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 0;
+    }
+
+    .meet-artists {
+        padding: 40px 20px;
+    }
+
+    .meet-artists__heading {
+        width: 100%;
+    }
+
+    .meet-artists__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .artist-card {
+        padding-top: 28px;
+    }
+
+    .artist-card:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .artist-card__content {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .introduction {
+        padding: 56px 32px;
+    }
+
+    .introduction__container {
+        gap: 40px;
+    }
+
+    .introduction__heading {
+        font-size: 36px;
+    }
+
+    .artists {
+        min-height: auto;
+        padding: 56px 32px;
+    }
+
+    .artists__container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .artists__gallery {
+        max-width: 760px;
+    }
+
+    .gallery {
+        padding: 56px 32px;
+    }
+
+    .gallery__heading,
+    .gallery__subtitle,
+    .gallery__grid {
+        width: min(100%, 860px);
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .gallery__item--birds,
+    .gallery__item--nature,
+    .gallery__item--yellow,
+    .gallery__item--leave,
+    .gallery__item--flower {
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 0;
+    }
+
+    .meet-artists {
+        padding: 56px 32px;
+    }
+
+    .meet-artists__heading {
+        width: min(100%, 860px);
+    }
+
+    .meet-artists__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .artist-card:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .artist-card__image {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1440px) {
+
+    .introduction__container,
+    .artists__container,
+    .meet-artists__container {
+        max-width: 1360px;
+    }
+
+    .gallery__container {
+        max-width: 1360px;
+    }
+
+    .gallery__heading,
+    .gallery__subtitle,
+    .gallery__grid,
+    .meet-artists__heading {
+        width: min(100%, 1240px);
+    }
+
+    .gallery__grid {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .artist-card__image {
+        max-width: 560px;
+        max-height: 720px;
+    }
+}

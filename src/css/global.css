@@ -212,6 +212,28 @@ ul {
     gap: var(--spacing-lg);
 }
 
+.header__menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-border);
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+}
+
+.header__menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-espressohout);
+    transition: background-color 0.2s ease;
+}
+
 .header__nav-link {
     font-size: 16px;
     color: var(--color-kastanjebruin);
@@ -383,4 +405,185 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     margin-top: 20px;
     letter-spacing: 8px;
     color: #fff;
+}
+
+/* ============================================================================
+   RESPONSIVE LAYOUT
+   ============================================================================ */
+
+/* Phone */
+@media (max-width: 767px) {
+    :root {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    h3 {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    .header__container {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: var(--spacing-sm);
+    }
+
+    .header__menu-toggle {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    .header__nav {
+        width: 100%;
+    }
+
+    .header[data-mobile-nav="ready"] .header__nav {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.25s ease, opacity 0.2s ease;
+    }
+
+    .header[data-mobile-nav="ready"].header--menu-open .header__nav {
+        max-height: 240px;
+        opacity: 1;
+    }
+
+    .header__nav-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-top: 8px;
+    }
+
+    .header__nav-link {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding-top: 0;
+        min-height: calc(100vh - 130px);
+        height: auto;
+    }
+
+    .hero__content {
+        padding: var(--spacing-lg) var(--spacing-md);
+        max-width: 100%;
+    }
+
+    .hero__title,
+    .hero__subtitle {
+        min-width: 0;
+    }
+
+    .hero__title {
+        font-size: 42px;
+        letter-spacing: -1.1px;
+    }
+
+    .hero__subtitle {
+        font-size: 17px;
+        max-width: 36ch;
+    }
+
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer__brand {
+        font-size: clamp(44px, 20vw, 72px);
+        letter-spacing: 2px;
+        margin-top: 0;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header__container {
+        padding: var(--spacing-md);
+    }
+
+    .header__nav-list {
+        gap: var(--spacing-md);
+    }
+
+    .hero {
+        padding-top: 0;
+    }
+
+    .hero__content {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .hero__title,
+    .hero__subtitle {
+        min-width: 0;
+    }
+
+    .hero__title {
+        font-size: 58px;
+        letter-spacing: -1.5px;
+    }
+
+    .footer {
+        padding: 48px 28px;
+    }
+
+    .footer__brand {
+        font-size: clamp(72px, 11vw, 96px);
+        letter-spacing: 4px;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1440px) {
+    .header__container {
+        max-width: 1520px;
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+    }
+
+    .hero__content {
+        max-width: 740px;
+        padding-left: clamp(64px, 7vw, 140px);
+        padding-right: clamp(64px, 7vw, 140px);
+    }
+
+    .hero__title {
+        font-size: clamp(72px, 5vw, 92px);
+        letter-spacing: -2px;
+    }
+
+    .hero__subtitle {
+        font-size: 22px;
+    }
+
+    .footer__container {
+        max-width: 1320px;
+    }
+
+    .footer__brand {
+        font-size: clamp(120px, 9vw, 180px);
+    }
 }

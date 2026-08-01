@@ -16,15 +16,20 @@
   <header class="header">
     <div class="header__container">
       <h1 class="header__logo">
-      <a href="index.html" class="header__logo-link">Zultebeke</a>
+        <a href="index.html" class="header__logo-link">Zultebeke</a>
       </h1>
-      <nav class="header__nav">
+      <button class="header__menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+        aria-label="Open navigatie">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__nav" id="primary-navigation">
         <ul class="header__nav-list">
           <li><a href="nathalie.html" class="header__nav-link" data-nav="nathalie">Nathalie Wullepit</a></li>
           <li><a href="lieven.html" class="header__nav-link" data-nav="lieven">Lieven Van West</a></li>
           <li><a href="index.html#contact" class="header__nav-link">Contact</a></li>
         </ul>
-      </nav>
       </nav>
     </div>
   </header>
@@ -144,36 +149,37 @@
     </section>
   </main>
 
-<footer class="footer" id="contact">
-  <div class="footer__container">
+  <footer class="footer" id="contact">
+    <div class="footer__container">
 
-    <!-- Kolom 1 -->
-    <div class="footer__col">
-      <h4 class="footer__title">Contact</h4>
-      <a href="mailto:info@zultebekesculptures.be" class="footer__email">
-        info@zultebekesculptures.be
-      </a>
-    </div>
-
-    <!-- Kolom 2 -->
-    <div class="footer__col">
-      <div class="footer__socials">
-        <a href="#" class="footer__icon">
-          <img src="src/assets/footer/facebook.png" alt="Facebook">
-        </a>
-        <a href="#" class="footer__icon">
-          <img src="src/assets/footer/instagram.png" alt="Instagram">
+      <!-- Kolom 1 -->
+      <div class="footer__col">
+        <h4 class="footer__title">Contact</h4>
+        <a href="mailto:info@zultebekesculptures.be" class="footer__email">
+          info@zultebekesculptures.be
         </a>
       </div>
-      <span class="footer__handle">zultebekesculptures</span>
+
+      <!-- Kolom 2 -->
+      <div class="footer__col">
+        <div class="footer__socials">
+          <a href="#" class="footer__icon">
+            <img src="src/assets/footer/facebook.png" alt="Facebook">
+          </a>
+          <a href="#" class="footer__icon">
+            <img src="src/assets/footer/instagram.png" alt="Instagram">
+          </a>
+        </div>
+        <span class="footer__handle">zultebekesculptures</span>
+      </div>
+
+      <!-- Onderste rij -->
+      <h3 class="footer__brand">Zultebeke</h3>
+
     </div>
+  </footer>
 
-    <!-- Onderste rij -->
-    <h3 class="footer__brand">Zultebeke</h3>
-
-  </div>
-</footer>
-
+  <script type="module" src="/src/js/mobile-nav.js"></script>
 
 </body>
 
