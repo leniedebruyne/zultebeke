@@ -17,6 +17,7 @@
     </script>
     <link rel="stylesheet" href="/src/css/global.css" />
     <link rel="stylesheet" href="/src/css/nathalie.css" />
+    <link rel="preload" as="image" href="/src/assets/header-img/nathalie-header.webp" type="image/webp" />
 </head>
 
 <body>
@@ -42,7 +43,11 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <img src="/src/assets/header-img/nathalie-header.png" alt="Nathalie Wullepit" class="hero__image">
+            <picture class="hero__picture">
+                <source srcset="/src/assets/header-img/nathalie-header.webp" type="image/webp">
+                <img src="/src/assets/header-img/nathalie-header.png" alt="Nathalie Wullepit"
+                    class="hero__image" width="1280" height="767" fetchpriority="high" decoding="async">
+            </picture>
             <div class="hero__content">
                 <h2 class="hero__title">Nathalie Wullepit</h2>
                 <p class="hero__subtitle">Keramiek met een verhaal</p>
