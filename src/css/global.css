@@ -257,6 +257,12 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     font-weight: 600;
 }
 
+.header__nav-link.is-active {
+    color: var(--color-espressohout);
+    border-bottom-color: var(--color-espressohout);
+    font-weight: 600;
+}
+
 
 /* ============================================================================
    HERO SECTION
@@ -311,7 +317,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     margin-bottom: var(--spacing-md);
     color: #fff;
     margin: 0;
-    min-width: 650px;
+    min-width: 675px;
 }
 
 .hero__subtitle {

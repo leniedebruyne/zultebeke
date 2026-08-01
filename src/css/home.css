@@ -172,13 +172,13 @@
 .gallery__item--leave {
     grid-column: 2;
     grid-row: 2;
-    margin-top: -303px;
+    margin-top: -350px;
 }
 
 .gallery__item--flower {
     grid-column: 3;
     grid-row: 2;
-    margin-top: -303px;
+    margin-top: -350px;
 }
 
 
