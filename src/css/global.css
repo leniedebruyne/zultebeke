@@ -418,6 +418,20 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     margin-top: 20px;
 }
 
+.footer__credit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.footer__credit-label {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
 /* Zultebeke onderaan */
 .footer__brand {
     text-align: left;
@@ -523,9 +537,9 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
         object-position: 70% center;
     }
 
- .hero__image2 {
-     object-position: 20% center;
- }
+    .hero__image2 {
+        object-position: 20% center;
+    }
 
     .hero__content {
         padding: var(--spacing-lg) var(--spacing-md);
@@ -560,6 +574,24 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
         margin-top: 0;
         gap: 14px;
         align-items: center;
+    }
+
+    .footer__credit {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .footer__credit-link {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+    }
+
+    .footer__credit-label {
+        font-size: 11px;
+        letter-spacing: 1px;
     }
 
     .footer__brand {
