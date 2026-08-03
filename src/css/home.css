@@ -319,15 +319,25 @@
         padding: 40px 20px;
     }
 
+    /* Gezamenlijke werken: single column on phone */
     .gallery__heading,
     .gallery__subtitle,
     .gallery__grid {
         width: min(100%, 420px);
+        margin: 0 auto;
     }
 
     .gallery__grid {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+
+    .gallery__item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
     }
 
     .gallery__item--birds,
@@ -338,6 +348,8 @@
         grid-column: auto;
         grid-row: auto;
         margin-top: 0;
+        width: 100%;
+        height: auto;
     }
 
     .meet-artists {
@@ -401,23 +413,36 @@
     .gallery__heading,
     .gallery__subtitle,
     .gallery__grid {
-        width: min(100%, 420px);
+        width: min(100%, 860px);
     }
 
-    .gallery__grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
+   .gallery__grid {
+       width: 100%;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 20px;
+   }
 
-    .gallery__item--birds,
-    .gallery__item--nature,
-    .gallery__item--yellow,
-    .gallery__item--leave,
-    .gallery__item--flower {
-        grid-column: auto;
-        grid-row: auto;
-        margin-top: 0;
-    }
+   .gallery__item {
+       width: 100%;
+   }
+
+   .gallery__item img {
+       width: 100%;
+       aspect-ratio: 4 / 3;
+       object-fit: cover;
+   }
+
+   /* Reset ALLES van de desktop collage */
+   .gallery__item--birds,
+   .gallery__item--nature,
+   .gallery__item--yellow,
+   .gallery__item--leave,
+   .gallery__item--flower {
+       grid-column: auto;
+       grid-row: auto;
+       margin-top: 0;
+   }
 
     .meet-artists {
         padding: 56px 32px;

@@ -266,8 +266,8 @@
     }
 
     .inspiration__gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 340px;
     }
 
     .inspiration__gallery-item--large {
@@ -319,6 +319,8 @@
         min-height: auto;
     }
 
+
+
     .about__container,
     .inspiration__container,
     .philosophy__container {
@@ -332,28 +334,18 @@
 
     .about__image-img,
     .philosophy__image {
-        max-width: 100%;
+        max-width: 300px;
     }
 
-    .inspiration__gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .inspiration__gallery-item--large {
-        grid-column: auto;
-        grid-row: auto;
-        height: auto;
-    }
 
     .gallery-section__container,
     .gallery-section__grid {
-        max-width: 420px;
+        max-width: 760px;
     }
 
     .gallery-section__grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
         gap: 16px;
         margin: 0 auto;
     }

@@ -261,8 +261,8 @@
     }
 
     .inspiration__gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 340px;
     }
 
     .inspiration__gallery-item--large {
@@ -326,25 +326,15 @@
         max-width: 100%;
     }
 
-    .inspiration__gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .inspiration__gallery-item--large {
-        grid-column: auto;
-        grid-row: auto;
-        height: auto;
-    }
 
     .gallery-section__container,
     .gallery-section__grid {
-        max-width: 420px;
+        max-width: 760px;
     }
 
     .gallery-section__grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
         gap: 16px;
         margin: 0 auto;
     }

@@ -365,6 +365,9 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    /* span the full footer so we can vertically distribute content */
+    grid-row: 1 / span 2;
+    justify-content: space-between;
 }
 
 /* Contact titel */
@@ -411,7 +414,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 .footer__brand-row {
     grid-column: 1 / -1;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     gap: 24px;
     flex-wrap: wrap;
@@ -606,7 +609,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1199px) {
+/* @media (min-width: 768px) and (max-width: 1199px) {
     .header__container {
         padding: var(--spacing-md);
     }
@@ -646,7 +649,14 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
         width: 112px;
     }
 }
+ */
 
+
+ @media (min-width: 768px) and (max-width: 1199px) {
+.story__image-img{
+    max-width: 300px;
+}
+ }
 /* Larger than desktop */
 @media (min-width: 1440px) {
     .header__container {
