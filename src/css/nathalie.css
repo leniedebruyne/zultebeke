@@ -260,6 +260,11 @@
         max-width: 100%;
     }
 
+    .story__image-img {
+        width: 100%;
+        max-width: 300px;
+    }
+
     .inspiration__gallery {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 340px;
@@ -321,9 +326,14 @@
         gap: 32px;
     }
 
-    .about__image-img,
-    .story__image {
-        max-width: 100%;
+    .about__image-img {
+        max-width: 300px;
+    }
+
+    .story__image,
+    .story__image-img {
+        width: 100%;
+        max-width: 300px;
     }
 
 
