@@ -423,6 +423,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+    width: fit-content;
 }
 
 .footer__credit-label {
@@ -443,9 +444,8 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
 }
 
 .footer__credit-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    width: fit-content;
 }
 
 .footer__credit-link:hover {
@@ -456,6 +456,7 @@ html[data-page="lieven"] .header__nav-link[data-nav="lieven"] {
     width: 132px;
     height: auto;
     filter: brightness(0) invert(1);
+    display: block;
 }
 
 /* ============================================================================

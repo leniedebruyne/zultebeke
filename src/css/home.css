@@ -322,7 +322,7 @@
     .gallery__heading,
     .gallery__subtitle,
     .gallery__grid {
-        width: 100%;
+        width: min(100%, 420px);
     }
 
     .gallery__grid {
@@ -401,12 +401,12 @@
     .gallery__heading,
     .gallery__subtitle,
     .gallery__grid {
-        width: min(100%, 860px);
+        width: min(100%, 420px);
     }
 
     .gallery__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .gallery__item--birds,

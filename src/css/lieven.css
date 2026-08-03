@@ -283,8 +283,9 @@
     .gallery-section__grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        max-width: 100%;
+        max-width: 420px;
         gap: 16px;
+        margin: 0 auto;
     }
 
     .gallery-section__item:nth-child(1),
@@ -335,23 +336,26 @@
     }
 
     .inspiration__gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
     .inspiration__gallery-item--large {
-        height: 360px;
+        grid-column: auto;
+        grid-row: auto;
+        height: auto;
     }
 
     .gallery-section__container,
     .gallery-section__grid {
-        max-width: 100%;
+        max-width: 420px;
     }
 
     .gallery-section__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 18px;
+        gap: 16px;
+        margin: 0 auto;
     }
 
     .gallery-section__item:nth-child(1),
